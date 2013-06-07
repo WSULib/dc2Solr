@@ -20,12 +20,14 @@
         
         <!--add doc tag to each-->
         <doc>
-            <!-- sets id of doc as identifier-->           
-            
+            <!-- sets id of doc as identifier-->            
             <xsl:element name="field">
                 <xsl:attribute name="name">id</xsl:attribute>
                 <xsl:value-of select="../../ns1:header/ns1:identifier" xmlns:ns1="http://www.openarchives.org/OAI/2.0/"/>
-            </xsl:element>            
+            </xsl:element>
+
+            <!--date field-->
+            <field name="last_modified">NOW</field>            
             
             <!--grab all elements and send to templates-->
             <xsl:for-each select="dc:title">
