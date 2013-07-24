@@ -5,7 +5,7 @@ dc2Solr
 <p><strong>Instructions for Use:</strong></p>
 
 <ol>
-	<li>Clone dc2Solr repository: git clone http://github.com/WSULib/dc2Solr</li>
+	<li>Clone dc2Solr repository: <em>git clone http://github.com/WSULib/dc2Solr</em></li>
 	<li>Set system specific variables in dc2Solr.py
 		<ul>
 			<li><em>baseURL</em> = Location of Solr core for indexing records</li>
@@ -24,3 +24,7 @@ dc2Solr
 		</ul>
 	</li>
 </ol>
+
+<hr>
+
+<em>Wayne State University Libraries, 2013</em>
