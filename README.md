@@ -24,3 +24,7 @@ dc2Solr
 		</ul>
 	</li>
 </ol>
+
+<hr>
+
+<em>Wayne State University Libraries, 2013</em>
