@@ -1,3 +1,4 @@
 #that which contains sens data
 sensitive.*
 *_new.*
+*.pyc
