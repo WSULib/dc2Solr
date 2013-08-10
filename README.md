@@ -18,7 +18,7 @@ dc2Solr
 	<li>Finally, run "python dc2Solr.py" with the desired actions to perform:
 		<ul>
 			<li><em>download</em> = Download all OAI sets from Digital Commons</li>
-			<li><em>transofmr</em> = Transforms OAI XML to Solr ready XML via the XSLT stylesheet "dc2solr.xsl"</li>
+			<li><em>transform</em> = Transforms OAI XML to Solr ready XML via the XSLT stylesheet "dc2solr.xsl"</li>
 			<li><em>index</em> = Indexes all Solr ready XML documents in "solrXML" into Solr</li>
 			<li><em>all</em> = Performs all three actions, in order.  This can be used to run this utility as a fully automated cron job.</li>
 		</ul>
