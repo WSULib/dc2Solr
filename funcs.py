@@ -49,7 +49,7 @@ def getSetRecords(setID,baseOAI):
 			setXML = urllib2.urlopen(tokenizedSetURL)
 			
 			#set filename
-			filename = "./setsXML/"+setID+"_"+str(tokenCount)+".xml"
+			filename = "./setsXML/"+filesafeSetID+"_"+str(tokenCount)+".xml"
 
 			contents = setXML.read()
 			file = open(str(filename), 'w')
@@ -62,15 +62,25 @@ def getSetRecords(setID,baseOAI):
 			rootTag = getElementTag(root)
 			rootNS = getElementNS(root)
 			resumpTokenCheck = root.findall(rootNS+"ListRecords/"+rootNS+"resumptionToken")
-			# print "Text of resumpTokenCheck is:",resumpTokenCheck[0].text	
-
-			if resumpTokenCheck[0].text == "None":
+			if len(resumpTokenCheck) > 0:
+				print "Text of resumpTokenCheck is:",resumpTokenCheck[0].text	
 				tokenCount = tokenCount + 100
 				continue
+
 			else:
 				print setID,"complete."
 				#conditional to set resumpTokensGo to false
 				resumpTokensGo = False
+			
+
+			# # probably failing here....
+			# if resumpTokenCheck[0].text != "None":
+			# 	tokenCount = tokenCount + 100
+			# 	continue
+			# else:
+			# 	print setID,"complete."
+			# 	#conditional to set resumpTokensGo to false
+			# 	resumpTokensGo = False
 
 #function to download OAI sets
 def downloadOAI(baseOAI):
